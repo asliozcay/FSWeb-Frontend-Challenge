@@ -1,0 +1,85 @@
+/* ... diğer stiller ... */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%; /* Topuzu yuvarlak yapar */
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3; /* Aktif arka plan rengi */
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px); /* Topuzu sağa kaydırır */
+  }
+  
+  /* Yuvarlak Slider */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* Hilal Şekli Stilleri */
+  .slider.round.moon-toggle:before {
+    /* Temel yuvarlak şekli koruyoruz */
+    background-color: #eee; /* Açık renk bir hilal */
+    box-shadow: 8px 0 0 #333; /* Sağ tarafa gölge (koyu renk) ekleyerek hilal illüzyonu oluşturuyoruz */
+  }
+  
+  input:checked + .slider.round.moon-toggle:before {
+    transform: translateX(26px); /* Kaydırma pozisyonunu koruyoruz */
+    background-color: #f0f0f0; /* Açık renk hilal (aktif) */
+    box-shadow: -8px 0 0 #2196F3; /* Sol tarafa gölge (aktif renk) ekleyerek hilal illüzyonu oluşturuyoruz */
+  }
+
+  .hero-gradient {
+    height: 671px; /* Yükseklik */
+    width: 100%; /* Genişlik */
+    background: linear-gradient(
+        to right,
+        var(--color-purpleDark) 70%, /* İlk renk %50'ye kadar */
+        var(--color-greenLight) 30% /* İkinci renk %50'den başlar */
+      );    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
