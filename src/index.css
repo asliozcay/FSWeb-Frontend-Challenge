@@ -13,18 +13,37 @@
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(
-      to right,
-      var(--color-purpleDark) 70%,
-      var(--color-greenLight) 30%
-    );
-
+    background: var(--color-purpleDark);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .hero-gradient {
+      background: linear-gradient(
+        to right,
+        var(--color-purpleDark) 70%,
+        var(--color-greenLight) 30%
+      );
+    }
+  }
+
+  .dark .hero-gradient {
+    background: #171043;
+  }
+
+  @media (min-width: 768px) {
+    .dark .hero-gradient {
+      background: linear-gradient(
+        to right,
+        #171043 70%,
+        #211f0b 30%
+      );
+    }
   }
 }
 
