@@ -29,6 +29,7 @@ export const Hero = () => {
     navItem1,
     navItem2,
     navItem3,
+    image
   } = heroData;
 
   return (
@@ -95,7 +96,7 @@ export const Hero = () => {
               </div>
             </div>
             <img
-              src={heroData.image}
+              src={image}
               alt="Hero"
               className="w-[350px] h-[376px] rounded-[18px] object-cover "
             />
