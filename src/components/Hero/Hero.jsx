@@ -37,7 +37,7 @@ export const Hero = () => {
         className="hero hero-gradient text-black dark:text-white"
         id="home"
       >
-        <div className="hero-content w-[65%]">
+        <div className="w-[65%]">
           <div className="flex items-center justify-between">
             <h1 className="text-greenLight text-[32px] font-bold justify-start">
               {header}
