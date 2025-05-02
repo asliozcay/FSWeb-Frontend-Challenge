@@ -1,7 +1,6 @@
 import { data } from "../../data";
 
-export const Profile = () => {
-  const language = "en";
+export const Profile = ({ language }) => {
   const profileData = data[language].profileSectionData;
   const {
     title,
@@ -16,7 +15,7 @@ export const Profile = () => {
   } = profileData;
 
   return (
-    <section className="profile bg-purpleDark flex items-center justify-center py-20">
+    <section className="profile bg-purpleDark dark:bg-[#171043] flex items-center justify-center py-20">
       <div className="w-[65%]">
         <h1 className="text-greenLight text-5xl! font-bold">{title}</h1>
         <div className="flex gap-8 pt-8">

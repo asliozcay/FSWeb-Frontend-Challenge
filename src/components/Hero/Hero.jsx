@@ -1,22 +1,12 @@
-import { useState } from "react";
 import { data } from "../../data";
-import "./Hero.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
-export const Hero = () => {
-  const [darkMode, setDarkMode] = useState(true);
-
+export const Hero = ({ setDarkMode, darkMode, setLanguage, language }) => {
   const handleToggle = () => {
     setDarkMode(!darkMode);
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
   };
 
-  const language = "en";
   const heroData = data[language].heroSectionData;
   const {
     header,
@@ -34,23 +24,19 @@ export const Hero = () => {
 
   return (
     <>
-      <section
-        className="hero hero-gradient text-black dark:text-white"
-        id="home"
-      >
+      <section className="hero-gradient pt-9 pb-37 dark:bg-gradient-to-r from-[#171043] via-[#171043] via-70% to-[#211f0b] to-30%">
         <div className="w-[65%]">
-          <div className="flex items-center justify-between">
-            <h1 className="text-greenLight text-[32px] font-bold justify-start">
+          <div className="flex justify-between h-19">
+            <h1 className="flex items-center text-greenLight text-3xl! font-bold ">
               {header}
             </h1>
-            <nav className="flex items-center space-x-4 justify-end">
+            <nav className="flex items-start space-x-4">
               <a
-                href="#"
-                className="text-[15px] font-bold text-grayLight"
+                onClick={() => setLanguage(language === "en" ? "tr" : "en")}
+                className="text-[15px] font-bold text-grayLight dark:text-[#777777] pr-5"
                 dangerouslySetInnerHTML={{ __html: navItem1 }}
               ></a>
               <div className="flex items-center space-x-2">
-                {/* Switch */}
                 <div
                   className={`relative w-16 h-8 rounded-full cursor-pointer transition-colors ${
                     darkMode ? "bg-purpleLight" : "bg-gray"
@@ -63,10 +49,8 @@ export const Hero = () => {
                     }`}
                   >
                     {darkMode ? (
-                      // Dark mode aktifken normal topuz
                       <div className="w-5 h-5 bg-yellowLight rounded-full"></div>
                     ) : (
-                      // Dark mode kapalıyken hilal ikonu
                       <FontAwesomeIcon
                         icon={faMoon}
                         className="text-yellowLight text-2xl "
@@ -75,7 +59,7 @@ export const Hero = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-[15px] font-bold text-purpleDark">
+              <p className="text-[15px] font-bold text-purpleDark dark:text-[#D9D9D9]">
                 {darkMode ? navItem2 : navItem3}
               </p>
             </nav>
@@ -85,12 +69,12 @@ export const Hero = () => {
               <h2 className="text-greenLight text-[54px] font-bold leading-none">
                 {title}
               </h2>
-              <p className="text-2xl font-normal">{subtitle}</p>
+              <p className="text-2xl text-white w-[530px]">{subtitle}</p>
               <div className="flex gap-x-3">
-                <button className="text-indigo-800 bg-white w-[127px] h-[52px] rounded-[6px] text-lg leading-7 font-medium border-1 border-indigo-800">
+                <button className="text-indigo-800 dark:text-white bg-white dark:bg-[#252128] w-[127px] h-[52px] rounded-[6px] text-lg leading-7 font-medium border-1 border-indigo-800 dark:border-white">
                   <i className={buttonIcon1}></i> {buttonText1}
                 </button>
-                <button className="text-indigo-800 bg-white w-[127px] h-[52px] rounded-[6px] text-lg leading-7 font-medium border-1 border-indigo-800">
+                <button className="text-indigo-800 dark:text-white bg-white dark:bg-[#252128] w-[127px] h-[52px] rounded-[6px] text-lg leading-7 font-medium border-1 border-indigo-800 dark:border-white">
                   <i className={buttonIcon2}></i> {buttonText2}
                 </button>
               </div>

@@ -13,7 +13,7 @@ export const data = {
   en: {
     heroSectionData: {
       header: "almila",
-      navItem1: "<span class='text-greenLight'>TÜRKÇE</span>'YE GEÇ",
+      navItem1: "<span class='text-greenLight dark:text-[#BAB2E7]'>TÜRKÇE</span>'YE GEÇ",
       navItem2: "DARK MODE",
       navItem3: "LIGHT MODE",
       title: "I am a Frontend Developer...",
@@ -117,7 +117,7 @@ export const data = {
   tr: {
     heroSectionData: {
       header: "almila",
-      navItem1: "SWITCH TO <span class='text-greenLight'>ENGLISH</span>",
+      navItem1: "SWITCH TO <span class='text-greenLight dark:text-[#BAB2E7]'>ENGLISH</span>",
       navItem2: "KARANLIK MOD",
       navItem3: "AÇIK MOD",
       title: "Ben Bir Frontend Geliştiricisiyim...",

@@ -7,7 +7,25 @@
   --color-grayLight: #777777;
   --color-yellowLight: #ffe86e;
   --color-greenLight: #cbf281;
-  --color-blueDark: #120B39;
+  --color-blueDark: #120b39;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(
+      to right,
+      var(--color-purpleDark) 70%,
+      var(--color-greenLight) 30%
+    );
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
 :root {
