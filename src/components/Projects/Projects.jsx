@@ -34,10 +34,10 @@ export const Projects = () => {
                   </Pill>
                 </div>
                 <div className="flex space-x-9">
-                  <a href="#" className="text-blueDark underline font-medium">
+                  <a href="#" className="text-blueDark underline underline-offset-3 font-medium">
                     {project1.link1}
                   </a>
-                  <a href="#" className="text-blueDark underline font-medium">
+                  <a href="#" className="text-blueDark underline underline-offset-3 font-medium">
                     {project1.link2}
                   </a>
                 </div>
@@ -67,10 +67,10 @@ export const Projects = () => {
                   </Pill>
                 </div>
                 <div className="flex space-x-9">
-                  <a href="#" className="text-blueDark underline font-medium">
+                  <a href="#" className="text-blueDark underline underline-offset-3 font-medium">
                     {project2.link1}
                   </a>
-                  <a href="#" className="text-blueDark underline font-medium">
+                  <a href="#" className="text-blueDark underline underline-offset-3 font-medium">
                     {project2.link2}
                   </a>
                 </div>

@@ -209,6 +209,7 @@ export const data = {
       title: "Bana bir mesaj gönder!",
       subtitle:
         "Bir sorunuz veya öneriniz var mı, yoksa sadece merhaba mı demek istiyorsunuz? Buyurun.",
+      email: "almilasucode@gmail.com",
       socials: {
         icon1: "fa-brands fa-twitter",
         icon2: "fa-brands fa-codepen",

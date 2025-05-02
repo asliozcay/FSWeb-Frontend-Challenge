@@ -29,7 +29,7 @@ export const Hero = () => {
     navItem1,
     navItem2,
     navItem3,
-    image
+    image,
   } = heroData;
 
   return (
