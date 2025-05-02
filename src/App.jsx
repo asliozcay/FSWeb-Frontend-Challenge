@@ -5,6 +5,8 @@ import { Projects } from "./components/Projects/Projects";
 import { Profile } from "./components/Profile/Profile";
 import { Footer } from "./components/Footer/Footer";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import { data } from "./data";
 
 function App() {
   const [language, setLanguage] = useState(() => {
@@ -25,6 +27,26 @@ function App() {
       localStorage.setItem("theme", "dark");
     }
   }, [darkMode]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.post(
+          "https://reqres.in/api/workintech",
+          data,
+          {
+            headers: {
+              "x-api-key": "reqres-free-v1",
+            },
+          }
+        );
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
