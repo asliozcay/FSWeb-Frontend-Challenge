@@ -39,9 +39,15 @@ export const Hero = () => {
       >
         <div className="hero-content w-[65%]">
           <div className="flex items-center justify-between">
-            <h1 className="text-greenLight text-[32px] font-bold justify-start">{header}</h1>
+            <h1 className="text-greenLight text-[32px] font-bold justify-start">
+              {header}
+            </h1>
             <nav className="flex items-center space-x-4 justify-end">
-              <a href="#" className="text-[15px] font-bold text-grayLight" dangerouslySetInnerHTML={{ __html: navItem1 }}></a>
+              <a
+                href="#"
+                className="text-[15px] font-bold text-grayLight"
+                dangerouslySetInnerHTML={{ __html: navItem1 }}
+              ></a>
               <div className="flex items-center space-x-2">
                 {/* Switch */}
                 <div
@@ -68,20 +74,31 @@ export const Hero = () => {
                   </div>
                 </div>
               </div>
-              <p className="ext-[15px] font-bold text-purpleDark">
+              <p className="text-[15px] font-bold text-purpleDark">
                 {darkMode ? navItem2 : navItem3}
               </p>
             </nav>
           </div>
-          <h2 className="text-greenLight">{title}</h2>
-          <p>{subtitle}</p>
-          <div className="buttons">
-            <a href="#" className="btn text-indigo">
-              <i className={buttonIcon1}></i> {buttonText1}
-            </a>
-            <a href="#" className="btn">
-              <i className={buttonIcon2}></i> {buttonText2}
-            </a>
+          <div className="flex items-center justify-between mt-10">
+            <div className="flex flex-col text-left gap-y-9">
+              <h2 className="text-greenLight text-[54px] font-bold leading-none">
+                {title}
+              </h2>
+              <p className="text-2xl font-normal">{subtitle}</p>
+              <div className="flex gap-x-3">
+                <button className="text-indigo-800 bg-white w-[127px] h-[52px] rounded-[6px] text-lg leading-7 font-medium border-1 border-indigo-800">
+                  <i className={buttonIcon1}></i> {buttonText1}
+                </button>
+                <button className="text-indigo-800 bg-white w-[127px] h-[52px] rounded-[6px] text-lg leading-7 font-medium border-1 border-indigo-800">
+                  <i className={buttonIcon2}></i> {buttonText2}
+                </button>
+              </div>
+            </div>
+            <img
+              src={heroData.image}
+              alt="Hero"
+              className="w-[350px] h-[376px] rounded-[18px] object-cover "
+            />
           </div>
         </div>
       </section>
